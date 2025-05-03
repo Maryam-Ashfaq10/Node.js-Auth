@@ -7,7 +7,11 @@ exports.home = (req, res) => {
 
 exports.register = async (req, res) => {
 
-  if (!req.username || !req.email || !req.password) {
+  const username = req.body.username;
+  const email = req.body.email;
+  const password = req.body.password;
+
+  if (!username || !email || !password) {
     return res.status(400).send('All fields are required.');
   }
 
@@ -21,7 +25,7 @@ exports.register = async (req, res) => {
  
      // Create a new user instance with the hashed password
     const newUser = new User({
-      name,
+      username,
       email,
       password 
     });
