@@ -1,1 +1,2 @@
+# About
 This is a simple and secure authentication system built using Node.js, Express, and MongoDB. It includes user registration and login functionalities, designed to be a starting point for applications that require user management. The system uses bcrypt for password hashing and JWT (JSON Web Tokens) for session management, ensuring user credentials are safely handled.
